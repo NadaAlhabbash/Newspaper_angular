@@ -1,0 +1,32 @@
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+    position: absolute;
+    transform: translateY(-200%); /* Center vertically */
+    right: 20px; 
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    font-weight: 400;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: black;
+}
+
+.container-fluid {
+    border-bottom: 1px solid #eae3d9;
+}
+
+@media (max-width: 991px) {
+    .container-fluid {
+        border-bottom: none;
+        display: flex;
+        justify-content: end;
+    }
+}
