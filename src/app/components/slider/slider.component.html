@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center">
+    <carousel [showIndicators]="true">
+        <slide *ngFor="let image of images; let i = index">
+            <div class="carousel-slide">
+                <div class="image-container">
+                    <img [src]="image.src" alt="{{ image.alt }}" class="image">
+                </div>
+                <div class="text-container">
+                    <div class="carousel-text">
+                        <h3>Slide {{ i + 1 }}</h3>
+                        <p>{{ image.alt }} Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ipsam.</p>
+                    </div>
+                </div>
+            </div>
+        </slide>
+    </carousel>
+</div>
