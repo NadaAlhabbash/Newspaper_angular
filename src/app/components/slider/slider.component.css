@@ -12,16 +12,6 @@
     height: 45vh;
 }
 
-.carousel-control-prev .icon-prev,
-.carousel-control-next .icon-next{
-    background: aqua;
-}
-
-.carousel-indicators {
-    bottom -100px;
-    background-color: aqua;
-}
-
 .image-container {
     right: 50%;
     width: 80%;
