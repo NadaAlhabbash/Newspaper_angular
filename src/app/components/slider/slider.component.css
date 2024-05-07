@@ -37,3 +37,23 @@
 .carousel-text {
     color: black;
 }
+
+@media (max-width: 991px) {
+    
+    .carousel-slide {
+        width: 75%;
+        height: auto;
+        flex-direction: column;
+
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+
+
+}
