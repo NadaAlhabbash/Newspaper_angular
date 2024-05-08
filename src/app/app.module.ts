@@ -13,7 +13,7 @@ import { TrendsNewsComponent } from './components/home/trends-news/trends-news.c
     AppComponent,
     HomeComponent,
     SliderComponent,
-    TrendsNewsComponent
+    TrendsNewsComponent,
   ],
   imports: [
     BrowserModule,
