@@ -1,5 +1,5 @@
 body {
-    height: 700vh;
+    height: 550vh;
 }
 
 .logo-header {
@@ -48,6 +48,14 @@ body {
     cursor: pointer;
     border-radius: 50%;
     color: white;
+}
+
+.text-color {
+    color: #b4b4b4;
+}
+
+.darker {
+    color: #808080;
 }
 
 @media (max-width: 991.98px) {
