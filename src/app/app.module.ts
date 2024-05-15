@@ -10,6 +10,9 @@ import { TrendsNewsComponent } from './components/home/trends-news/trends-news.c
 import { MiddleCardComponent } from './components/home/middle-card/middle-card.component';
 import { SiteSectionComponent } from './components/home/site-section/site-section.component';
 import { RecentNewsComponent } from './components/home/recent-news/recent-news.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { RecentNewsComponent } from './components/home/recent-news/recent-news.c
     TrendsNewsComponent,
     MiddleCardComponent,
     SiteSectionComponent,
-    RecentNewsComponent
+    RecentNewsComponent,
+    FooterComponent,
+    CategoriesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
