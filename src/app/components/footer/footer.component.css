@@ -1,0 +1,63 @@
+
+.footer-container {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    background-color: #f8f9fa;
+    width: 100%;
+}
+
+.newsletter {
+    margin-right: 25px;
+    /* Add some space between the two sections */
+    width: 25vw;
+}
+
+.newsletter h5 {
+    margin-bottom: 10px;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* Adjust border color as needed */
+    border-radius: 25px;
+    margin-right: 10px;
+    /* Add some space between input and button */
+    width: 35vw;
+    /* Adjust width as needed */
+}
+
+.Sbutton {
+    width: 40px;
+    /* Adjust button width as needed */
+    height: 40px;
+    /* Adjust button height as needed */
+    border: none;
+    border-radius: 50%;
+    /* Makes the button circular */
+    background-color: black;
+    /* Adjust button background color as needed */
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newsletter {
+        width: 50vw;
+    }
+
+}

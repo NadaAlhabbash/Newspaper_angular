@@ -2,11 +2,13 @@
     border: none;
     font-size: 1.25rem;
     position: absolute;
-    transform: translateY(-200%); /* Center vertically */
-    right: 20px; 
+    transform: translateY(-200%);
+    /* Center vertically */
+    right: 20px;
 }
 
-.navbar-toggler:focus, .btn-close:focus {
+.navbar-toggler:focus,
+.btn-close:focus {
     box-shadow: none;
     outline: none;
 }
@@ -15,7 +17,8 @@
     font-weight: 400;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: black;
 }
 
@@ -24,6 +27,7 @@
     margin: -7px;
     border-bottom: 1px solid #eae3d9;
 }
+
 
 @media (max-width: 991px) {
     .container-fluid {
@@ -46,6 +50,6 @@
     .text-container {
         width: 100%;
     }
-    
-    
+
+
 }

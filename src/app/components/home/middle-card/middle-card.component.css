@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    justify-content: start;
+    background-color: #f8f9fa
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.image {
+    width: 50%;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card-tail {
+    line-height: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image {
+        width: 100%;
+    }
+}
