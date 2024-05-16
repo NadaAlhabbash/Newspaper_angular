@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 2%;
+    width: 100%;
+}
+
+.toLeftSide {
+    width: 80%;
+}
+
+.card-content {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    font-size: small;
+    gap: 15px;
+}
+
+.image {
+    width: 30%;
+    height: 100%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.content {
+    flex: 1;
+    height: 100%;
+    font-size: small;
+    overflow: auto;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.card-header,
+.card-content {
+    padding: 10px;
+    width: 100%;
+}
+
+.card-end {
+    padding-top: 0px;
+    line-height: 1px;
+}
+
+@media (max-width: 991.98px) {
+    .container {
+        flex-direction: column;
+    }
+}

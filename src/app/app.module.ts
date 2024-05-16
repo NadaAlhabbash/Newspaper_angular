@@ -13,13 +13,31 @@ import { RecentNewsComponent } from './components/home/recent-news/recent-news.c
 import { FooterComponent } from './components/footer/footer.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { PoliticsComponent } from './components/politics/politics.component';
+import { BusinessComponent } from './components/business/business.component';
+import { HealthComponent } from './components/health/health.component';
+import { DesignComponent } from './components/design/design.component';
+import { SportComponent } from './components/sport/sport.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SliderComponent,
-    TrendsNewsComponent
+    TrendsNewsComponent,
+    MiddleCardComponent,
+    SiteSectionComponent,
+    RecentNewsComponent,
+    FooterComponent,
+    CategoriesComponent,
+    NavbarComponent,
+    PoliticsComponent,
+    BusinessComponent,
+    HealthComponent,
+    DesignComponent,
+    SportComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
