@@ -9,6 +9,7 @@ import { DesignComponent } from './components/design/design.component';
 import { SportComponent } from './components/sport/sport.component';
 import { ContactComponent } from './components/contact/contact.component';
 
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent  },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'design', component: DesignComponent},
   { path: 'sport', component: SportComponent},
   { path: 'contact', component: ContactComponent},
+  { path: 'categories', component: CategoriesComponent}
 ];
 
 @NgModule({
