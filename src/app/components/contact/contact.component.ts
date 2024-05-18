@@ -13,11 +13,15 @@ export class ContactComponent implements OnInit, OnDestroy {
   constructor(private appComponent: AppComponent) { }
 
   ngOnInit(): void {
-      this.appComponent.showFooter = false; 
-  }
+  setTimeout(() => {
+    this.appComponent.showFooter = false;
+  });
+}
 
-  ngOnDestroy(): void {
-      this.appComponent.showFooter = true; 
-  }
+ngOnDestroy(): void {
+  setTimeout(() => {
+    this.appComponent.showFooter = true;
+  });
+}
 
 }
