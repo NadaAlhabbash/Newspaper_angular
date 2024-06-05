@@ -5,40 +5,23 @@
             <h5><u>Editor's Pick</u></h5>
         </div>
         <div class="heading-content">
-            <div class="box big-card">
-                <img src="https://imageslidermaker.com/ism/image/slides/beautiful-701678_1280.jpg" alt="">
-                <div class="cont">
-                    <h3>News Needs to Meet Its Audiences Where They Are</h3>
+            <div *ngIf="editorsPickArticles.length > 0" class="box big-card">
+                <img [src]="editorsPickArticles[0].urlToImage" alt="{{ editorsPickArticles[0].title }}">
+                <div class="content">
+                    <h3>{{ editorsPickArticles[0].title }}</h3>
                     <br>
-                    <p class="darker">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam
-                        quibusdam.</p>
-                    <p class="small">Dave Rogers in News</p>
-                    <p class="small text-color">Jun 14 • 3 min read</p>
+                    <p class="darker">{{ editorsPickArticles[0].description }}</p>
+                    <p class="small">{{ editorsPickArticles[0].author }} in {{ editorsPickArticles[0].source.name }}</p>
+                    <p class="small text-color">{{ editorsPickArticles[0].publishedAt | date: 'MMM d • mm' }}</p>
                 </div>
             </div>
             <div class="box img-cards">
-                <div class="side-card">
-                    <img src="https://imageslidermaker.com/ism/image/slides/beautiful-701678_1280.jpg" alt="">
+                <div *ngFor="let article of editorsPickArticles.slice(1, 4)" class="side-card">
+                    <img [src]="article.urlToImage" alt="">
                     <div class="content">
-                        <h6>News Need To meet Its Audiences Where They Are</h6>
-                        <p class="small">Dave Rogers in News</p>
-                        <p class="small text-color">Jun 14 • 3 min read</p>
-                    </div>
-                </div>
-                <div class="side-card">
-                    <img src="https://imageslidermaker.com/ism/image/slides/beautiful-701678_1280.jpg" alt="">
-                    <div class="content">
-                        <h6>News Need To meet Its Audiences Where They Are</h6>
-                        <p class="small">Dave Rogers in News</p>
-                        <p class="small text-color">Jun 14 • 3 min read</p>
-                    </div>
-                </div>
-                <div class="side-card">
-                    <img src="https://imageslidermaker.com/ism/image/slides/beautiful-701678_1280.jpg" alt="">
-                    <div class="content">
-                        <h6>News Need To meet Its Audiences Where They Are</h6>
-                        <p class="small">Dave Rogers in News</p>
-                        <p class="small text-color">Jun 14 • 3 min read</p>
+                        <h6>{{ article.title }}</h6>
+                        <p class="small">{{ article.author }} in {{ article.source.name }}</p>
+                        <p class="small text-color">{{ article.publishedAt | date: 'MMM d • mm' }}</p>
                     </div>
                 </div>
             </div>
@@ -48,30 +31,35 @@
         <div class="heading" id="trending">
             <h5><u>Trending</u></h5>
         </div>
-        <div class="side-card">
-            <h1 class="text-color">01</h1>
+        <div *ngFor="let article of trendingArticles" class="side-card">
+            <h1 class="text-color">{{ trendingArticles.indexOf(article) + 1 }}</h1>
             <div class="content">
-                <h6>News Needs to Meet Its Audiences Where They Are</h6>
-                <p class="small">Dave Rogers in News</p>
-                <p class="small text-color">Jun 14 • 3 min read</p>
-            </div>
-        </div>
-        <div class="side-card">
-            <h1 class="text-color">02</h1>
-            <div class="content">
-                <h6>News Needs to Meet Its Audiences Where They Are</h6>
-                <p class="small">Dave Rogers in News</p>
-                <p class="small text-color">Jun 14 • 3 min read</p>
-            </div>
-        </div>
-        <div class="side-card">
-            <h1 class="text-color">03</h1>
-            <div class="content">
-                <h6>News Needs to Meet Its Audiences Where They Are</h6>
-                <p class="small">Dave Rogers in News</p>
-                <p class="small text-color">Jun 14 • 3 min read</p>
+                <h6>{{ article.title }}</h6>
+                <p class="small">{{ article.author }} in {{ article.source.name }}</p>
+                <p class="small text-color">{{ article.publishedAt | date: 'MMM d • mm' }}</p>
             </div>
         </div>
         <p class="more">SEE ALL TRENDS ></p>
     </div>
 </div>
+
+<!-- <div class="news-container">
+   
+    <div class="first-section">
+        <div class="heading">
+            <h5><u>Editor's Pick</u></h5>
+        </div>
+        <div class="heading-content">
+            <div *ngFor="let article of editorsPickArticles" class="box big-card">
+                <img [src]="article.urlToImage" alt="">
+                <div class="cont">
+                    <h3>{{ article.title }}</h3>
+                    <br>
+                    <p class="darker">{{ article.description }}</p>
+                    <p class="small">{{ article.author }} in {{ article.source.name }}</p>
+                    <p class="small text-color">{{ article.publishedAt | date: 'MMM d • mm' }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

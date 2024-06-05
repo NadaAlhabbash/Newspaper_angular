@@ -1,16 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NewsServiceService } from '../../../services/news/news-service.service';
+import { Article } from '../../../models/article';
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.css'
 })
-export class SliderComponent {
+export class SliderComponent implements OnInit {
+  articles: Article[] = [];
+    constructor(private newsService: NewsServiceService) { }
 
-  images = [
-    { src: 'https://imageslidermaker.com/ism/image/slides/beautiful-701678_1280.jpg', alt: 'Image 1' },
-    { src: 'https://imageslidermaker.com/ism/image/slides/flower-729514_1280.jpg', alt: 'Image 2' },
-    { src: 'https://mediacdn.cincopa.com/v2/270978/17!1YFBAMto3CAwcC/4/04.jpg', alt: 'Image 3' }
-  ];
+  ngOnInit(): void {
+    this.newsService.getTopHeadlines().subscribe({
+      next: (response: Article[]) => {
+        this.articles = response.filter(article => article.urlToImage); // Filter out articles without an image
+        console.log('Top headlines with images:', this.articles);
+      },
+      error: (error: any) => {
+        console.error('Error fetching top headlines', error);
+      }
+    });
+  }
 
 }
+
+
+
